@@ -1,3 +1,10 @@
+<?php
+if (!isset($_COOKIE['login']) || !isset($_COOKIE['password'])) {
+    header('HTTP/1.1 403 Forbidden');
+    exit;
+}
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -25,6 +32,7 @@
             margin-left: 35%;
             font-size: 26px;
         }
+
     </style>
 </head>
 <body>
@@ -36,7 +44,7 @@
 </form>
 
 <a href="list.php">Перейти к тестам</a><br>
-
+<a href="logout.php">Выход</a>
 
 <?php
 if (isset($_FILES['testFile'])) {

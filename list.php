@@ -17,6 +17,10 @@ $id = $_SESSION['id'];
             color: #151b8b;
             text-decoration: none;
         }
+        .exit {
+            font-size: 26px;
+            margin-left: 48%;
+        }
 
         h1 {
             text-align: center;
@@ -59,5 +63,6 @@ $id = $_SESSION['id'];
         echo '<tr><td colspan="3" height="30"><a class="add" href="admin.php">Добавить тест</a></td></tr>';
     }
     ?></table>
+<a class="exit" href="logout.php">Выход</a>
 </body>
 </html>

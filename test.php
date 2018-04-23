@@ -7,7 +7,7 @@ if (!file_exists(__DIR__ . '/tests/' . $_GET["name"] . '.json')) {
 }
 $testFile = '/tests/' . $_GET["name"] . '.json';
 $test = json_decode(file_get_contents(__DIR__ . $testFile));
-if(isset($_COOKIE['authorized'])) {
+if (isset($_COOKIE['authorized'])) {
     $username = $_COOKIE['id'];
     echo $username;
 }
@@ -25,7 +25,7 @@ if(isset($_COOKIE['authorized'])) {
 
         fieldset {
             color: #f3faff;
-            background: rgba(148,147,200, 0.5);
+            background: rgba(148, 147, 200, 0.5);
             border: 5px dashed rebeccapurple;
             width: 40%;
             margin: 0 auto 20px;
@@ -37,12 +37,13 @@ if(isset($_COOKIE['authorized'])) {
 
         input[type="submit"] {
             color: #f3faff;
-            background:  rgba(148,147,200, 0.5);
+            background: rgba(148, 147, 200, 0.5);
             margin-left: 30%;
             width: 40%;
             border: 5px dashed rebeccapurple;
             font: bold 26px/30px Bitter;
         }
+
         input[type="submit"]:active {
             color: #acea94;
             background: #7574a8;
@@ -50,6 +51,11 @@ if(isset($_COOKIE['authorized'])) {
             width: 40%;
             border: 5px dashed #832b99;
             font: bold 28px/30px Bitter;
+        }
+        .exit {
+            color: #fff9ff;
+            font-size: 26px;
+            margin-left: 48%;
         }
 
         p {
@@ -78,5 +84,6 @@ if(isset($_COOKIE['authorized'])) {
     ?>
     <input type="submit" value="Принять ответы">
 </form>
+<a class="exit" href="logout.php">Выход</a>
 </body>
 </html>
